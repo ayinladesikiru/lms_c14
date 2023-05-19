@@ -1,7 +1,9 @@
-from django.urls import path
+from rest_framework.routers import SimpleRouter, DefaultRouter
+from django.urls import path, include
 from . import views
 
-urlpatterns = [
-    path('authors/', views.list_authors),
-    path('me/', views.welcome)
-]
+router = DefaultRouter()
+router.register('authors', views.AuthorViewSet)
+router.register('books', views.BookViewSet)
+
+urlpatterns = router.urls

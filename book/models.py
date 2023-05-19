@@ -23,17 +23,17 @@ class Author(models.Model):
 
 class Book(models.Model):
     LANGUAGE_CHOICES = [
-        ('YORUBA', "Y"),
-        ('HAUSA', "H"),
-        ('IGBO', "I"),
-        ('ENGLISH', "E")
+        ("Y", 'YORUBA'),
+        ("H", 'HAUSA'),
+        ('I', 'IGBO'),
+        ("E", 'ENGLISH')
     ]
 
     GENRE_CHOICES = [
-        ('FICTION', 'FIC'),
-        ('POLITICS', 'POL'),
-        ('FINANCE', 'FIN'),
-        ('ROMANCE', 'ROM')
+        ("FIC", 'FICTION'),
+        ("POL", 'POLITICS'),
+        ("FIN", 'FINANCE'),
+        ("ROM", 'ROMANCE')
     ]
 
     title = models.CharField(max_length=255, blank=False, null=False)
